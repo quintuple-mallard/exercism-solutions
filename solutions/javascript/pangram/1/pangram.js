@@ -1,0 +1,1 @@
+export const isPangram = str => [...new Set(str.toLowerCase().split('').filter(char => 'abcdefghijklmnopqrstuvwxyz'.includes(char)).sort())].join('').includes('abcdefghijklmnopqrstuvwxyz')
