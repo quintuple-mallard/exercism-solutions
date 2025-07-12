@@ -1,0 +1,1 @@
+export const isIsogram = str => str.toLowerCase().replace(/[^\w]/g,'').length===new Set(str.toLowerCase().replace(/[^\w]/g,'')).size
