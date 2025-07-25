@@ -1,0 +1,1 @@
+ToRna ← ⨬(∘|""):⤙≍[] ˜get map "GCTA" "CGAU"
