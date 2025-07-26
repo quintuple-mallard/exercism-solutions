@@ -1,0 +1,1 @@
+IsPangram ← |1 /+⌕"ABCDEFGHIJKLMNOPQRSTUVWXYZ"◴⍆⌵
