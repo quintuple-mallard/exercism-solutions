@@ -1,0 +1,30 @@
+.globl is_leap_year
+
+is_leap_year:
+        li $t1, 4    
+        div $a0, $t1     
+        mfhi $t2         
+        bne $t2, $zero, return_not_leap
+
+        li $t1, 100 
+        div $a0, $t1
+        mfhi $t3
+        beq $t3, $zero, check_divisible_by_400
+
+        # If divisible by 4 but not by 100
+        li $v0, 1        
+        jr $ra           
+
+check_divisible_by_400:
+        li $t1, 400      
+        div $a0, $t1     
+        mfhi $t4         
+        beq $t4, $zero, return_is_leap # If remainder is zero, it is a leap year
+
+return_not_leap:
+        li $v0, 0        
+        jr $ra           
+
+return_is_leap:
+        li $v0, 1       
+        jr $ra           
