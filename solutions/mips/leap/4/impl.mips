@@ -1,0 +1,25 @@
+.globl is_leap_year
+
+is_leap_year:
+        li $t1, 4    
+        rem $t2, $a0, $t1     
+        bnez $t2, return_not_leap
+
+        li $t1, 100 
+        rem $t3, $a0, $t1
+        
+        bnez $t3, return_is_leap        
+
+check_divisible_by_400:
+        li $t1, 400      
+        div $a0, $t1     
+        mfhi $t4         
+        beq $t4, $zero, return_is_leap 
+
+return_not_leap:
+        li $v0, 0        
+        jr $ra           
+
+return_is_leap:
+        li $v0, 1
+        jr $ra
