@@ -1,0 +1,1 @@
+Recite ← ⍣(˜⊂{$"And all for the want of a _."}⊃⊢⧈(□$"For want of a _ the _ was lost.")){}
