@@ -1,0 +1,1 @@
+Steps ← ◌⍢(⨬(÷₂|+₁×₃)⊸◿₂⊙+₁|≠₁)⊙0 ⍤"only positive integers are allowed"⊸>₀
