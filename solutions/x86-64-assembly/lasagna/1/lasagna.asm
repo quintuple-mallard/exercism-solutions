@@ -1,7 +1,8 @@
 ; Everything that comes after a semicolon (;) is a comment
 
 ; Assembler-time constants may be defined using 'equ'
-
+EXPECTED_MINUTES equ 40
+TIME_PER_LAYER equ 2
 section .text
 
 ; You should implement functions in the .text section
@@ -9,7 +10,7 @@ section .text
 ; the global directive makes a function visible to the test files
 global expected_minutes_in_oven
 expected_minutes_in_oven:
-    mov rax, 40
+    mov rax, EXPECTED_MINUTES
     ret
 
 global remaining_minutes_in_oven
@@ -20,8 +21,8 @@ remaining_minutes_in_oven:
 
 global preparation_time_in_minutes
 preparation_time_in_minutes:
+    imul rdi, TIME_PER_LAYER
     mov rax, rdi
-    imul rax, 2
     ret
 
 global elapsed_time_in_minutes
